@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberAcademy | Одностраничный сайт</title>
+  <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+  <header>
+    <div class="header-wrap">
+      <img src="BESTIE.png" alt="Лого" class="logo">
+      <nav>
+        <a href="#hero" class="active">Главная</a>
+        <a href="#team">О нас</a>
+        <a href="#register">Регистрация</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+        <div class="slider-bg">
+            <div class="slide active" style="background-image: url(Knife.png);"></div>
+            <div class="slide" style="background-image: url(Chaker.jpeg);"></div>
+            <div class="slide" style="background-image: url(Xaker.jpeg);"></div>
+        </div>
+      <div class="hero-content">
+        <h2 class="fade-up">Будущее кибербезопасности начинается здесь</h2>
+      <p class="fade-up">Присоединяйтесь к лучшим — развивайте навыки и стройте карьеру в сфере ИБ!</p>
+      <a href="#register" class="hero-btn fade-up">Попробовать</a>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Наши услуги</h2>
+      <div class="services-grid">
+        <div class="service-card fade-scale">
+          <img src="curse.jpg" alt="Онлайн-курсы">
+          <h3>Онлайн-курсы</h3>
+          <p>Практические занятия по кибербезопасности и сетевой защите</p>
+        </div>
+        <div class="service-card fade-scale">
+          <img src="choto to.jpg" alt="Сертификация">
+          <h3>Сертификация</h3>
+          <p>Получите признанный сертификат и начните карьеру в ИТ</p>
+        </div>
+        <div class="service-card fade-scale">
+          <img src="i eche.jpeg" alt="Наставничество">
+          <h3>Наставничество</h3>
+          <p>Опытные менторы помогут вам двигаться вперёд без ошибок</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="team">
+      <h2>Наша команда</h2>
+      <div class="team-grid">
+        <div class="member fade-scale">
+          <div class="photo-rect" style="background-image: url('untermensch.jpg');"></div>
+          <h3>Александр Дементьев</h3>
+          <p>Руководитель проекта и преподаватель</p>
+          <button class="modal-btn" onclick="openModal('modal-alex')">Подробнее</button>
+        </div>
+        <div class="member fade-scale">
+          <div class="photo-rect" style="background-image: url('BCS.gif');"></div>
+          <h3>Алексей Аустермюль</h3>
+          <p>Специалист по сетевой безопасности</p>
+          <button class="modal-btn" onclick="openModal('modal-alexey')">Подробнее</button>
+        </div>
+        <div class="member fade-scale">
+          <div class="photo-rect" style="background-image: url('Bella.jpg');"></div>
+          <h3>Арайлым Жархын</h3>
+          <p>Разработчик учебных курсов</p>
+          <button class="modal-btn" onclick="openModal('modal-arailym')">Подробнее</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="register">
+      <h2 class="fade-up">Регистрация</h2>
+      <form id="regForm">
+        <label for="name" class="fade-up">Имя:</label>
+        <input type="text" id="name" class="fade-up" required>
+
+        <label for="email" class="fade-up">Email:</label>
+        <input type="text" id="email" class="fade-up" required>
+
+        <label for="password" class="fade-up">Пароль:</label>
+        <input type="password" id="password" class="fade-up" required>
+
+        <label for="confirmPassword" class="fade-up">Подтверждение пароля:</label>
+        <input type="password" id="confirmPassword" class="fade-up" required>
+
+        <label for="service" class="fade-up">Тип услуги:</label>
+        <select id="service" class="fade-up" required>
+          <option value="">Выберите услугу</option>
+          <option>Стажировка</option>
+          <option>Онлайн-курсы</option>
+          <option>Вебинар</option>
+        </select>
+
+        <button type="submit" class="fade-up">Зарегистрироваться</button>
+        <p id="message" class="fade-up"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 CyberAcademy. Все права защищены</p>
+    <p>Email: sanek.dem2006@gmail.com</p>
+  </footer>
+  <div class="modal" id="modal-alex">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('modal-alex')">&times;</span>
+    <h3>Александр Дементьев</h3>
+    <p>Главный преподаватель и создатель CyberAcademy.Курирует все программы обучения. Говорят, он родился уже с флешкой в руке. Преподаёт так, что даже Wi-Fi усиливается от его лекций. Способен одновременно писать код, пить чай и спасать мир от утечки данных. </p>
+  </div>
+</div>
+
+<div class="modal" id="modal-alexey">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('modal-alexey')">&times;</span>
+    <h3>Алексей Аустермюль</h3>
+    <p>Эксперт по сетевой безопасности. Ведёт практикумы и анализ киберинцидентов. Когда он заходит в сеть, даже баги чинятся сами. Его пинг — отрицательный. Протоколы подчиняются, файрволы боятся. Шифрует быстрее, чем ты моргнёшь.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-arailym">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('modal-arailym')">&times;</span>
+    <h3>Арайлым Жархын</h3>
+    <p>Создатель учебных курсов. Отвечает за UX, структуру, геймификацию. Создаёт курсы с таким интерфейсом, что даже JavaScript улыбается. Может превратить обычную лекцию в квест с боссами и бонусами. Пишет HTML на ногтях, CSS в снах.</p>
+  </div>
+</div>
+</body>
+</html>
